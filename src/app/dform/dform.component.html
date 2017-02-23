@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()"  #darticleForm="ngForm">
+  <div *ngFor="let field of fields">
+     <!--<df-question [question]="question" [form]="form"></df-question>-->
+     <app-dfield [field]="field"></app-dfield>
+  </div>
+  <input type="submit" [disabled]="!darticleForm.form.valid" value="提交">
+</form>

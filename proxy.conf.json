@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "http://cmsservice.100bt.com:80",
+    "changeOrigin": true,
+    "ws": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

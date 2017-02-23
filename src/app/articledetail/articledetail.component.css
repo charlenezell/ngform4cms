@@ -1,0 +1,10 @@
+.fc{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.fc_l{
+background-color:lightyellow;
+flex-grow: 1;
+}

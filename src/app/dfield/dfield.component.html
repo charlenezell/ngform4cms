@@ -1,0 +1,12 @@
+<div [ngSwitch]="field.type">
+  <div *ngSwitchCase="'text'">
+    <app-input-text [desc]="field.name" [name]="field.name"></app-input-text>
+  </div>
+  <div *ngSwitchCase="'time'">{{field.name}}--time</div>
+  <div *ngSwitchCase="'image'">{{field.name}}--image</div>
+  <div *ngSwitchCase="'select'">{{field.name}}--select</div>
+  <div *ngSwitchCase="'multimedia'">{{field.name}}--multimedia</div>
+  <div *ngSwitchCase="'richText'">{{field.name}}--richText</div>
+  <div *ngSwitchCase="'articleContent'">{{field.name}}--articleContent</div>
+  <div *ngSwitchCase="'fieldMap'">{{field.name}}--fieldMap</div>
+</div>

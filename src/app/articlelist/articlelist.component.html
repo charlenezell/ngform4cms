@@ -1,0 +1,8 @@
+<ul>
+<li *ngFor="let item of articleList;">
+  <a routerLink="/a/{{item.articleId}}">《{{item.articleTitle}}》({{item.articleId}})[{{item.uploadTime}}]</a>
+</li>
+<li *ngIf="articleList.length <= 0">
+  empty
+</li>
+</ul>
