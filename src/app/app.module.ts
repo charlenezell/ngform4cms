@@ -12,6 +12,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { InputTextComponent } from './input-text/input-text.component';
 import { DformComponent } from './dform/dform.component';
 import { DfieldComponent } from './dfield/dfield.component';
+import { MaterialModule } from '@angular/material';
+import { InputTimeComponent } from './input-time/input-time.component';
+import { InputJSONComponent } from './input-json/input-json.component';
+import { InputImageComponent } from './input-image/input-image.component';
+import { InputBaseComponent } from './input-base/input-base.component';
+import { InputSelectComponent } from './input-select/input-select.component';
+// other imports
 
 const appRoutes: Routes = [
   { path: 'a/:id', component: ArticledetailComponent },
@@ -27,13 +34,19 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     InputTextComponent,
     DformComponent,
-    DfieldComponent
+    DfieldComponent,
+    InputTimeComponent,
+    InputJSONComponent,
+    InputImageComponent,
+    InputBaseComponent,
+    InputSelectComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes,{
       useHash:true
     })

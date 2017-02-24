@@ -2,24 +2,29 @@
   <!--<p>articleTitle:{{info.articleTitle}}</p>
   <p>imgTitle:{{info.imgTitle}}</p>
   <p>author:{{info.uploadUserName}}</p>-->
-  <div class="fc">
-    <div class="fc_l">
-      <div>静态表单</div>
+  <md-tab-group>
+    <md-tab label="静态表单">
       <form (ngSubmit)="onsubmit(articleForm)" #articleForm="ngForm">
-        <p><label for="title">title:<input required name ="imgTitle" [(ngModel)]="info.imgTitle" id="title" type="text"  /></label></p>
-        <p><label for="userName">userName:<input name="uploadUserName" [(ngModel)]="info.uploadUserName" id="userName" type="text" /></label></p>
-        <input type="submit" [disabled]="!articleForm.form.valid" value="提交">
+        <p>
+          <md-input-container>
+            <input mdInput placeholder="title" required name="imgTitle" [(ngModel)]="info.imgTitle">
+          </md-input-container>
+        </p>
+        <p>
+          <md-input-container>
+            <input mdInput placeholder="userName" name="uploadUserName" [(ngModel)]="info.uploadUserName">
+          </md-input-container>
+        </p>
+        <button type="submit" [disabled]="!articleForm.form.valid" md-raised-button>提交</button>
         <!--<div (onclick)="toggleValid(articleForm.form)">{{articleForm.form.valid}}</div>-->
       </form>
-    </div>
-    <div class="fc_l">
+    </md-tab>
+    <md-tab label="动态表单">
       <div>动态表单</div>
       <app-dform [fields]="fields"></app-dform>
-    </div>
-  </div>
-
-
-  <pre style="max-width:500px">
+    </md-tab>
+  </md-tab-group>
+  <pre style="max-width:100%;overflow:scroll;">
       {{getInfoString()}}
   </pre>
 </div>

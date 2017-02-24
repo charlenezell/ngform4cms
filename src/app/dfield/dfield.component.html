@@ -2,11 +2,25 @@
   <div *ngSwitchCase="'text'">
     <app-input-text [desc]="field.name" [name]="field.name"></app-input-text>
   </div>
-  <div *ngSwitchCase="'time'">{{field.name}}--time</div>
-  <div *ngSwitchCase="'image'">{{field.name}}--image</div>
-  <div *ngSwitchCase="'select'">{{field.name}}--select</div>
-  <div *ngSwitchCase="'multimedia'">{{field.name}}--multimedia</div>
-  <div *ngSwitchCase="'richText'">{{field.name}}--richText</div>
-  <div *ngSwitchCase="'articleContent'">{{field.name}}--articleContent</div>
-  <div *ngSwitchCase="'fieldMap'">{{field.name}}--fieldMap</div>
+  <div *ngSwitchCase="'time'">
+    <app-input-time [desc]="field.name" [name]="field.name"></app-input-time>
+  </div>
+  <div *ngSwitchCase="'image'">
+    <app-input-image [desc]="field.name" [name]="field.name"></app-input-image>
+  </div>
+  <div *ngSwitchCase="'select'">
+    {{field.name}}--select
+  </div>
+  <div *ngSwitchCase="'multimedia'">
+    {{field.name}}--multimedia
+  </div>
+  <div *ngSwitchCase="'richText'">
+    {{field.name}}--richText
+  </div>
+  <div *ngSwitchCase="'articleContent'">
+    <app-input-json [desc]="field.name" [name]="field.name"></app-input-json>
+  </div>
+  <div *ngSwitchCase="'fieldMap'">
+    <app-input-json [desc]="field.name" [name]="field.name"></app-input-json>
+  </div>
 </div>
